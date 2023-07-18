@@ -31,7 +31,9 @@ function App() {
         </Grid>
         <Grid container spacing={{ xs: 2, md: 4 }}>
           <Grid item xs={12} sm={6} md={4} lg={4}>
-            <div className="card">
+            <div className="card" onClick={ () => {
+              alert("Hello");
+            }}>
               <p className="taskHead">Task One added now</p>
               <p className="taskDesc">Description goes here</p>
               <div className="moreDetails">

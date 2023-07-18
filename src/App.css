@@ -55,7 +55,7 @@
 .sectionHead {
   display: flex;
   align-items: center;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .sectionSubHead {
@@ -81,12 +81,34 @@
   flex-direction: column;
   border-radius: 0.625rem;
   border: 1px solid #f4f4f4;
+  border-bottom: 0px;
   background: #fff;
   /* margin: 20px; */
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.05),
     1px 2px 5px 0px rgba(0, 0, 0, 0.05), 6px 7px 9px 0px rgba(0, 0, 0, 0.04),
     13px 17px 13px 0px rgba(0, 0, 0, 0.03),
     23px 30px 15px 0px rgba(0, 0, 0, 0.01), 36px 46px 16px 0px rgba(0, 0, 0, 0);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1),
+    5px 4px 14px 0px rgba(0, 0, 0, 0.1), 18px 17px 25px 0px rgba(0, 0, 0, 0.09),
+    41px 39px 34px 0px rgba(0, 0, 0, 0.05),
+    72px 69px 40px 0px rgba(0, 0, 0, 0.01),
+    113px 108px 44px 0px rgba(0, 0, 0, 0);
+  transform: scale(1.02);
+}
+
+.card:active {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.05) inset,
+    1px 2px 5px 0px rgba(0, 0, 0, 0.05) inset,
+    6px 7px 9px 0px rgba(0, 0, 0, 0.04) inset,
+    13px 17px 13px 0px rgba(0, 0, 0, 0.03) inset,
+    23px 30px 15px 0px rgba(0, 0, 0, 0.01) inset,
+    36px 46px 16px 0px rgba(0, 0, 0, 0) inset;
+  transform: scale(0.99);
 }
 
 .taskHead {
@@ -130,6 +152,7 @@
   width: 100%;
   padding: 14px 0px;
   flex: 1;
+  transition: all 0.3s;
 }
 
 .pendingTask .done-btn {
@@ -143,6 +166,11 @@
   border-top: 1px solid #f4f4f4;
   color: #0054d2;
   flex: 1;
+  transition: all 1.3s ease;
+}
+
+.pendingTask .edit-btn:hover {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #ECF1FF 100%);
 }
 
 .pendingTask .delete-btn {
@@ -153,16 +181,21 @@
   flex: 1.4;
 }
 
+.pendingTask .delete-btn:hover {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #ECF1FF 100%);
+
+}
+
 .completedTask .done-btn {
   border-radius: 0rem 0rem 0rem 0.625rem;
-  background: linear-gradient(90deg, #E20000 0%, rgba(226, 81, 0, 0.88) 100%);
+  background: linear-gradient(90deg, #e20000 0%, rgba(226, 81, 0, 0.88) 100%);
   color: #fff;
   flex: 1.7;
 }
 
 .completedTask .edit-btn {
   border-top: 1px solid #f4f4f4;
-  color: #E20000;
+  color: #e20000;
   flex: 1;
 }
 
@@ -170,6 +203,6 @@
   border-radius: 0rem 0rem 0.625rem 0rem;
   border-top: 1px solid #f4f4f4;
   border-left: 1px solid #f4f4f4;
-  color: #E20000;
+  color: #e20000;
   flex: 1.4;
 }
