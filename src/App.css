@@ -25,6 +25,7 @@
 }
 
 /* Design start */
+
 * {
   font-family: Vi_MD;
   color: #2f2f2f;
@@ -62,18 +63,11 @@
   margin-left: 8px;
 }
 
-.addTask {
-  border: 3px solid #2f2f2f;
-  border-radius: 7px;
-  padding: 12px;
-  width: 100%;
-  text-decoration: none;
-  display: block;
+.addTaskContainer {
+  cursor: pointer;
 }
 
-/* .cardContainer {
-  display: flex;
-} */
+/* Card Section Start */
 
 .card {
   /* width: 20.5rem; */
@@ -155,6 +149,8 @@
   transition: all 0.3s;
 }
 
+/* PendingTask Button Section */
+
 .pendingTask .done-btn {
   border-radius: 0rem 0rem 0rem 0.625rem;
   background: #0054d2;
@@ -170,7 +166,11 @@
 }
 
 .pendingTask .edit-btn:hover {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #ECF1FF 100%);
+  background: linear-gradient(180deg, rgba(243, 248, 255, 0.00) 0%, #EFEFEF 41.67%);
+}
+
+.pendingTask .edit-btn:active {
+  background: linear-gradient(180deg, #EFEFEF 41.67%, rgba(243, 248, 255, 0.00) 100%);
 }
 
 .pendingTask .delete-btn {
@@ -182,9 +182,15 @@
 }
 
 .pendingTask .delete-btn:hover {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #ECF1FF 100%);
-
+  background: linear-gradient(180deg, rgba(243, 248, 255, 0.00) 0%, #EFEFEF 41.67%);
 }
+
+.pendingTask .delete-btn:active {
+  background: linear-gradient(180deg, #EFEFEF 41.67%, rgba(243, 248, 255, 0.00) 100%);
+}
+
+
+/* CompleteTask Button Section */
 
 .completedTask .done-btn {
   border-radius: 0rem 0rem 0rem 0.625rem;
@@ -199,10 +205,26 @@
   flex: 1;
 }
 
+.completedTask .edit-btn:hover {
+  background: linear-gradient(180deg, rgba(243, 248, 255, 0.00) 0%, #EFEFEF 41.67%);
+}
+
+.completedTask .edit-btn:active {
+  background: linear-gradient(180deg, #EFEFEF 41.67%, rgba(243, 248, 255, 0.00) 100%);
+}
+
 .completedTask .delete-btn {
   border-radius: 0rem 0rem 0.625rem 0rem;
   border-top: 1px solid #f4f4f4;
   border-left: 1px solid #f4f4f4;
   color: #e20000;
   flex: 1.4;
+}
+
+.completedTask .delete-btn:hover {
+  background: linear-gradient(180deg, rgba(243, 248, 255, 0.00) 0%, #EFEFEF 41.67%);
+}
+
+.completedTask .delete-btn:active {
+  background: linear-gradient(180deg, #EFEFEF 41.67%, rgba(243, 248, 255, 0.00) 100%);
 }
