@@ -40,12 +40,26 @@
 
 .header {
   margin: 40px 0;
-  font-size: 40px;
+  font-size: 20px;
 }
 
-.listContainer {
-  font-size: 22px;
-  /* width: 80%; */
+.eachContainer {
+  margin-bottom: 60px;
+}
+
+.headGroup {
+  /* display: flex; */
+  justify-content: space-between;
+}
+
+.sectionHead {
+  display: flex;
+  align-items: center;
+  margin-bottom: .5rem;
+}
+
+.sectionSubHead {
+  margin-left: 8px;
 }
 
 .addTask {
@@ -114,27 +128,48 @@
   text-align: center;
   justify-content: center;
   width: 100%;
-  padding: 12px 0px;
+  padding: 14px 0px;
   flex: 1;
 }
 
-.done-btn {
+.pendingTask .done-btn {
   border-radius: 0rem 0rem 0rem 0.625rem;
   background: #0054d2;
   color: #fff;
   flex: 1.7;
 }
 
-.edit-btn {
+.pendingTask .edit-btn {
   border-top: 1px solid #f4f4f4;
   color: #0054d2;
   flex: 1;
 }
 
-.delete-btn {
+.pendingTask .delete-btn {
   border-radius: 0rem 0rem 0.625rem 0rem;
   border-top: 1px solid #f4f4f4;
   border-left: 1px solid #f4f4f4;
   color: #0054d2;
+  flex: 1.4;
+}
+
+.completedTask .done-btn {
+  border-radius: 0rem 0rem 0rem 0.625rem;
+  background: linear-gradient(90deg, #E20000 0%, rgba(226, 81, 0, 0.88) 100%);
+  color: #fff;
+  flex: 1.7;
+}
+
+.completedTask .edit-btn {
+  border-top: 1px solid #f4f4f4;
+  color: #E20000;
+  flex: 1;
+}
+
+.completedTask .delete-btn {
+  border-radius: 0rem 0rem 0.625rem 0rem;
+  border-top: 1px solid #f4f4f4;
+  border-left: 1px solid #f4f4f4;
+  color: #E20000;
   flex: 1.4;
 }
