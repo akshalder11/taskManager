@@ -1,7 +1,9 @@
 import "./App.css";
-import * as React from "react";
+import React, { useState } from 'react';
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
+import Card from "./components/Card.js"
+import Modal from "./components/Modal.js"
 import {
   CalendarOutline,
   ListOutline,
@@ -11,6 +13,10 @@ import {
 } from "react-ionicons";
 
 function App() {
+  
+//  State Variables
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div className="App">
       <div className="header">
@@ -44,283 +50,12 @@ function App() {
           </Grid>
         </Grid>
         <Grid container spacing={{ xs: 2, md: 4 }}>
-          <Grid item xs={12} sm={6} md={4} lg={4}>
-            <div className="card">
-              <div
-                className="cardContainer"
-                onClick={() => {
-                  alert("CardClicked");
-                }}
-              >
-                <p className="taskHead">Task One added now</p>
-                <p className="taskDesc">Description goes here</p>
-                <div className="moreDetails">
-                  <div className="iconContainer">
-                    <CalendarOutline
-                      color={"#2f2f2f"}
-                      title={"Calendar"}
-                      height="28px"
-                      width="28px"
-                    />
-                    <p className="values">20th July</p>
-                  </div>
-                  <div className="iconContainer">
-                    <ListOutline
-                      color={"#2f2f2f"}
-                      title={"SubTask"}
-                      height="28px"
-                      width="28px"
-                    />
-                    <p className="values">12/32 tasks</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="buttonContainer">
-                <div
-                  className="btn done-btn"
-                  onClick={() => {
-                    alert("Marked as Done");
-                  }}
-                >
-                  Mark As Done
-                </div>
-                <div
-                  className="btn edit-btn"
-                  onClick={() => {
-                    alert("EditClicked");
-                  }}
-                >
-                  Edit
-                </div>
-                <div
-                  className="btn delete-btn"
-                  onClick={() => {
-                    alert("DeleteClicked");
-                  }}
-                >
-                  Delete
-                </div>
-              </div>
-            </div>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={4}>
-            <div className="card">
-              <p className="taskHead">Task One added now</p>
-              <p className="taskDesc">Description goes here</p>
-              <div className="moreDetails">
-                <div className="iconContainer">
-                  <CalendarOutline
-                    color={"#2f2f2f"}
-                    title={"Calendar"}
-                    height="28px"
-                    width="28px"
-                  />
-                  <p className="values">20th July</p>
-                </div>
-                <div className="iconContainer">
-                  <ListOutline
-                    color={"#2f2f2f"}
-                    title={"SubTask"}
-                    height="28px"
-                    width="28px"
-                  />
-                  <p className="values">12/32 tasks</p>
-                </div>
-              </div>
-              <div className="buttonContainer">
-                <div className="btn done-btn">Mark As Done</div>
-                <div className="btn edit-btn">Edit</div>
-                <div className="btn delete-btn">Delete</div>
-              </div>
-            </div>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={4}>
-            <div className="card">
-              <p className="taskHead">Task One added now</p>
-              <p className="taskDesc">Description goes here</p>
-              <div className="moreDetails">
-                <div className="iconContainer">
-                  <CalendarOutline
-                    color={"#2f2f2f"}
-                    title={"Calendar"}
-                    height="28px"
-                    width="28px"
-                  />
-                  <p className="values">20th July</p>
-                </div>
-                <div className="iconContainer">
-                  <ListOutline
-                    color={"#2f2f2f"}
-                    title={"SubTask"}
-                    height="28px"
-                    width="28px"
-                  />
-                  <p className="values">12/32 tasks</p>
-                </div>
-              </div>
-              <div className="buttonContainer">
-                <div className="btn done-btn">Mark As Done</div>
-                <div className="btn edit-btn">Edit</div>
-                <div className="btn delete-btn">Delete</div>
-              </div>
-            </div>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={4}>
-            <div className="card">
-              <p className="taskHead">Task One added now</p>
-              <p className="taskDesc">Description goes here</p>
-              <div className="moreDetails">
-                <div className="iconContainer">
-                  <CalendarOutline
-                    color={"#2f2f2f"}
-                    title={"Calendar"}
-                    height="28px"
-                    width="28px"
-                  />
-                  <p className="values">20th July</p>
-                </div>
-                <div className="iconContainer">
-                  <ListOutline
-                    color={"#2f2f2f"}
-                    title={"SubTask"}
-                    height="28px"
-                    width="28px"
-                  />
-                  <p className="values">12/32 tasks</p>
-                </div>
-              </div>
-              <div className="buttonContainer">
-                <div className="btn done-btn">Mark As Done</div>
-                <div className="btn edit-btn">Edit</div>
-                <div className="btn delete-btn">Delete</div>
-              </div>
-            </div>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={4}>
-            <div className="card">
-              <p className="taskHead">Task One added now</p>
-              <p className="taskDesc">Description goes here</p>
-              <div className="moreDetails">
-                <div className="iconContainer">
-                  <CalendarOutline
-                    color={"#2f2f2f"}
-                    title={"Calendar"}
-                    height="28px"
-                    width="28px"
-                  />
-                  <p className="values">20th July</p>
-                </div>
-                <div className="iconContainer">
-                  <ListOutline
-                    color={"#2f2f2f"}
-                    title={"SubTask"}
-                    height="28px"
-                    width="28px"
-                  />
-                  <p className="values">12/32 tasks</p>
-                </div>
-              </div>
-              <div className="buttonContainer">
-                <div className="btn done-btn">Mark As Done</div>
-                <div className="btn edit-btn">Edit</div>
-                <div className="btn delete-btn">Delete</div>
-              </div>
-            </div>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={4}>
-            <div className="card">
-              <p className="taskHead">Task One added now</p>
-              <p className="taskDesc">Description goes here</p>
-              <div className="moreDetails">
-                <div className="iconContainer">
-                  <CalendarOutline
-                    color={"#2f2f2f"}
-                    title={"Calendar"}
-                    height="28px"
-                    width="28px"
-                  />
-                  <p className="values">20th July</p>
-                </div>
-                <div className="iconContainer">
-                  <ListOutline
-                    color={"#2f2f2f"}
-                    title={"SubTask"}
-                    height="28px"
-                    width="28px"
-                  />
-                  <p className="values">12/32 tasks</p>
-                </div>
-              </div>
-              <div className="buttonContainer">
-                <div className="btn done-btn">Mark As Done</div>
-                <div className="btn edit-btn">Edit</div>
-                <div className="btn delete-btn">Delete</div>
-              </div>
-            </div>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={4}>
-            <div className="card">
-              <p className="taskHead">Task One added now</p>
-              <p className="taskDesc">Description goes here</p>
-              <div className="moreDetails">
-                <div className="iconContainer">
-                  <CalendarOutline
-                    color={"#2f2f2f"}
-                    title={"Calendar"}
-                    height="28px"
-                    width="28px"
-                  />
-                  <p className="values">20th July</p>
-                </div>
-                <div className="iconContainer">
-                  <ListOutline
-                    color={"#2f2f2f"}
-                    title={"SubTask"}
-                    height="28px"
-                    width="28px"
-                  />
-                  <p className="values">12/32 tasks</p>
-                </div>
-              </div>
-              <div className="buttonContainer">
-                <div className="btn done-btn">Mark As Done</div>
-                <div className="btn edit-btn">Edit</div>
-                <div className="btn delete-btn">Delete</div>
-              </div>
-            </div>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={4}>
-            <div className="card">
-              <p className="taskHead">Task One added now</p>
-              <p className="taskDesc">Description goes here</p>
-              <div className="moreDetails">
-                <div className="iconContainer">
-                  <CalendarOutline
-                    color={"#2f2f2f"}
-                    title={"Calendar"}
-                    height="28px"
-                    width="28px"
-                  />
-                  <p className="values">20th July</p>
-                </div>
-                <div className="iconContainer">
-                  <ListOutline
-                    color={"#2f2f2f"}
-                    title={"SubTask"}
-                    height="28px"
-                    width="28px"
-                  />
-                  <p className="values">12/32 tasks</p>
-                </div>
-              </div>
-              <div className="buttonContainer">
-                <div className="btn done-btn">Mark As Done</div>
-                <div className="btn edit-btn">Edit</div>
-                <div className="btn delete-btn">Delete</div>
-              </div>
-            </div>
-          </Grid>
+                  <Card/>
+                  <Card/>
+                  <Card/>
+                  <Card/>
+                  <Card/>
+          
         </Grid>
       </Container>
       <Container className="eachContainer completedTask">
@@ -522,6 +257,7 @@ function App() {
           </Grid>
         </Grid>
       </Container>
+      { showModal && <Modal/>}
     </div>
   );
 }

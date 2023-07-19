@@ -1,0 +1,162 @@
+/* Card Section Start */
+
+.card {
+    /* width: 20.5rem; */
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.625rem;
+    border: 1px solid #f4f4f4;
+    border-bottom: 0px;
+    background: #fff;
+    /* margin: 20px; */
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.05),
+      1px 2px 5px 0px rgba(0, 0, 0, 0.05), 6px 7px 9px 0px rgba(0, 0, 0, 0.04),
+      13px 17px 13px 0px rgba(0, 0, 0, 0.03),
+      23px 30px 15px 0px rgba(0, 0, 0, 0.01), 36px 46px 16px 0px rgba(0, 0, 0, 0);
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1),
+      5px 4px 14px 0px rgba(0, 0, 0, 0.1), 18px 17px 25px 0px rgba(0, 0, 0, 0.09),
+      41px 39px 34px 0px rgba(0, 0, 0, 0.05),
+      72px 69px 40px 0px rgba(0, 0, 0, 0.01),
+      113px 108px 44px 0px rgba(0, 0, 0, 0);
+    transform: scale(1.02);
+  }
+  
+  .card:active {
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.05) inset,
+      1px 2px 5px 0px rgba(0, 0, 0, 0.05) inset,
+      6px 7px 9px 0px rgba(0, 0, 0, 0.04) inset,
+      13px 17px 13px 0px rgba(0, 0, 0, 0.03) inset,
+      23px 30px 15px 0px rgba(0, 0, 0, 0.01) inset,
+      36px 46px 16px 0px rgba(0, 0, 0, 0) inset;
+    transform: scale(0.99);
+  }
+  
+  .taskHead {
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    margin: 18px 18px 0px 18px;
+  }
+  
+  .taskDesc {
+    font-size: 1.05rem;
+    font-style: normal;
+    font-weight: 400;
+    margin: 8px 18px 8px 18px;
+  }
+  
+  .moreDetails {
+    display: flex;
+    margin: 8px 18px 14px 18px;
+  }
+  
+  .iconContainer {
+    display: flex;
+    margin-right: 18px;
+  }
+  
+  .values {
+    margin: 0.15rem 0.5rem;
+  }
+  
+  .buttonContainer {
+    display: flex;
+  }
+  
+  .btn {
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    padding: 14px 0px;
+    flex: 1;
+    transition: all 0.3s;
+  }
+  
+  /* PendingTask Button Section */
+  
+  .pendingTask .done-btn {
+    border-radius: 0rem 0rem 0rem 0.625rem;
+    background: #0054d2;
+    color: #fff;
+    flex: 1.7;
+  }
+  
+  .pendingTask .edit-btn {
+    border-top: 1px solid #f4f4f4;
+    color: #0054d2;
+    flex: 1;
+    transition: all 1.3s ease;
+  }
+  
+  .pendingTask .edit-btn:hover {
+    background: linear-gradient(180deg, rgba(243, 248, 255, 0.00) 0%, #EFEFEF 41.67%);
+  }
+  
+  .pendingTask .edit-btn:active {
+    background: linear-gradient(180deg, #EFEFEF 41.67%, rgba(243, 248, 255, 0.00) 100%);
+  }
+  
+  .pendingTask .delete-btn {
+    border-radius: 0rem 0rem 0.625rem 0rem;
+    border-top: 1px solid #f4f4f4;
+    border-left: 1px solid #f4f4f4;
+    color: #0054d2;
+    flex: 1.4;
+  }
+  
+  .pendingTask .delete-btn:hover {
+    background: linear-gradient(180deg, rgba(243, 248, 255, 0.00) 0%, #EFEFEF 41.67%);
+  }
+  
+  .pendingTask .delete-btn:active {
+    background: linear-gradient(180deg, #EFEFEF 41.67%, rgba(243, 248, 255, 0.00) 100%);
+  }
+  
+  
+  /* CompleteTask Button Section */
+  
+  .completedTask .done-btn {
+    border-radius: 0rem 0rem 0rem 0.625rem;
+    background: linear-gradient(90deg, #e20000 0%, rgba(226, 81, 0, 0.88) 100%);
+    color: #fff;
+    flex: 1.7;
+  }
+  
+  .completedTask .edit-btn {
+    border-top: 1px solid #f4f4f4;
+    color: #e20000;
+    flex: 1;
+  }
+  
+  .completedTask .edit-btn:hover {
+    background: linear-gradient(180deg, rgba(243, 248, 255, 0.00) 0%, #EFEFEF 41.67%);
+  }
+  
+  .completedTask .edit-btn:active {
+    background: linear-gradient(180deg, #EFEFEF 41.67%, rgba(243, 248, 255, 0.00) 100%);
+  }
+  
+  .completedTask .delete-btn {
+    border-radius: 0rem 0rem 0.625rem 0rem;
+    border-top: 1px solid #f4f4f4;
+    border-left: 1px solid #f4f4f4;
+    color: #e20000;
+    flex: 1.4;
+  }
+  
+  .completedTask .delete-btn:hover {
+    background: linear-gradient(180deg, rgba(243, 248, 255, 0.00) 0%, #EFEFEF 41.67%);
+  }
+  
+  .completedTask .delete-btn:active {
+    background: linear-gradient(180deg, #EFEFEF 41.67%, rgba(243, 248, 255, 0.00) 100%);
+  }
+  
