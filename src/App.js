@@ -99,7 +99,6 @@ function App() {
               </div>
               <div className="buttonContainer">
                 <div className="btn done-btn">Mark As Undone</div>
-                <div className="btn edit-btn">Edit</div>
                 <div className="btn delete-btn">Delete</div>
               </div>
             </div>
@@ -130,7 +129,6 @@ function App() {
               </div>
               <div className="buttonContainer">
                 <div className="btn done-btn">Mark As Undone</div>
-                <div className="btn edit-btn">Edit</div>
                 <div className="btn delete-btn">Delete</div>
               </div>
             </div>
@@ -161,7 +159,6 @@ function App() {
               </div>
               <div className="buttonContainer">
                 <div className="btn done-btn">Mark As Undone</div>
-                <div className="btn edit-btn">Edit</div>
                 <div className="btn delete-btn">Delete</div>
               </div>
             </div>
@@ -192,7 +189,6 @@ function App() {
               </div>
               <div className="buttonContainer">
                 <div className="btn done-btn">Mark As Undone</div>
-                <div className="btn edit-btn">Edit</div>
                 <div className="btn delete-btn">Delete</div>
               </div>
             </div>
@@ -223,7 +219,6 @@ function App() {
               </div>
               <div className="buttonContainer">
                 <div className="btn done-btn">Mark As Undone</div>
-                <div className="btn edit-btn">Edit</div>
                 <div className="btn delete-btn">Delete</div>
               </div>
             </div>
@@ -254,7 +249,6 @@ function App() {
               </div>
               <div className="buttonContainer">
                 <div className="btn done-btn">Mark As Undone</div>
-                <div className="btn edit-btn">Edit</div>
                 <div className="btn delete-btn">Delete</div>
               </div>
             </div>
