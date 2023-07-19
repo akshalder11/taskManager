@@ -4,6 +4,7 @@ import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import Card from "./components/Card.js"
 import CardModal from "./components/CardModal.js"
+import TaskModal from "./components/TaskModal.js"
 import {
   CalendarOutline,
   ListOutline,
@@ -15,11 +16,13 @@ import {
 function App() {
 
   //  State Variables
-  const [showModal, setShowModal] = useState(false);
+  const [showCardModal, setShowCardModal] = useState(false);
+  const [showTaskModal, setShowTaskModal] = useState(false);
 
   return (
     <div className="App">
-      {showModal && <CardModal showModal={showModal} setShowModal={setShowModal} />}
+      {showCardModal && <CardModal showCardModal={showCardModal} setShowCardModal={setShowCardModal} />}
+      {showTaskModal && <TaskModal showTaskModal={showTaskModal} setShowTaskModal={setShowTaskModal} />}
       <div className="header">
         <h1>To-Do List</h1>
       </div>
@@ -38,7 +41,7 @@ function App() {
           </Grid>
           <Grid item>
             <div className="sectionHead addTaskContainer" onClick={() => {
-              alert("Adding Task");
+              setShowTaskModal(true);
             }}>
               <ColorWandOutline
                 color={"#2f2f2f"}
@@ -51,11 +54,11 @@ function App() {
           </Grid>
         </Grid>
         <Grid container spacing={{ xs: 2, md: 4 }}>
-          <Card setShowModal={setShowModal} />
-          <Card setShowModal={setShowModal} />
-          <Card setShowModal={setShowModal} />
-          <Card setShowModal={setShowModal} />
-          <Card setShowModal={setShowModal} />
+          <Card setShowCardModal={setShowCardModal} />
+          <Card setShowCardModal={setShowCardModal} />
+          <Card setShowCardModal={setShowCardModal} />
+          <Card setShowCardModal={setShowCardModal} />
+          <Card setShowCardModal={setShowCardModal} />
 
         </Grid>
       </Container>

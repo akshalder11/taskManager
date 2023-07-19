@@ -4,21 +4,21 @@ import clsx from 'clsx';
 import { styled, Box } from '@mui/system';
 import Modal from '@mui/base/Modal';
 
-export default function CardModal({showCardModal, setShowCardModal}) {
-  const handleClose = () => setShowCardModal(false);
+export default function TaskModal({showTaskModal, setShowTaskModal}) {
+  const handleClose = () => setShowTaskModal(false);
 
   return (
     <div>
       <StyledModal
         aria-labelledby="unstyled-modal-title"
         aria-describedby="unstyled-modal-description"
-        open={showCardModal}
+        open={showTaskModal}
         onClose={handleClose}
         slots={{ backdrop: StyledBackdrop }}
       >
         <Box sx={style}>
-          <h2 id="unstyled-modal-title">Task One added now</h2>
-          <p id="unstyled-modal-description">Description goes here</p>
+          <h2 id="unstyled-modal-title">Add Task below</h2>
+          <p id="unstyled-modal-description">Input fields goes here</p>
           <button onClick={handleClose}>Close Modal</button>
         </Box>
       </StyledModal>

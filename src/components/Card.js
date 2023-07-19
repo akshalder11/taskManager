@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Card.css";
-// import Modal from "./Modal.js";
 import Grid from "@mui/material/Grid";
 import {
   CalendarOutline,
@@ -10,7 +9,7 @@ import {
   CheckmarkDoneCircleOutline,
 } from "react-ionicons";
 
-const Card = ({ setShowModal }) => {
+const Card = ({ setShowCardModal }) => {
 
   return (
     <>
@@ -19,7 +18,7 @@ const Card = ({ setShowModal }) => {
           <div
             className="cardContainer"
             onClick={() => {
-              setShowModal(true);
+              setShowCardModal(true);
             }}
           >
             <p className="taskHead">Task One added now</p>
