@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Card.css";
-import Modal from "./Modal.js";
+// import Modal from "./Modal.js";
 import Grid from "@mui/material/Grid";
 import {
   CalendarOutline,
@@ -10,9 +10,7 @@ import {
   CheckmarkDoneCircleOutline,
 } from "react-ionicons";
 
-const Card = () => {
-  //  State Variables
-  const [showModal, setShowModal] = useState(false);
+const Card = ({ setShowModal }) => {
 
   return (
     <>
@@ -75,7 +73,6 @@ const Card = () => {
             </div>
           </div>
         </div>
-      {showModal && <Modal />}
       </Grid>
     </>
   );

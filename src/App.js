@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import Card from "./components/Card.js"
-import Modal from "./components/Modal.js"
+import CardModal from "./components/CardModal.js"
 import {
   CalendarOutline,
   ListOutline,
@@ -13,12 +13,13 @@ import {
 } from "react-ionicons";
 
 function App() {
-  
-//  State Variables
+
+  //  State Variables
   const [showModal, setShowModal] = useState(false);
 
   return (
     <div className="App">
+      {showModal && <CardModal showModal={showModal} setShowModal={setShowModal} />}
       <div className="header">
         <h1>To-Do List</h1>
       </div>
@@ -37,8 +38,8 @@ function App() {
           </Grid>
           <Grid item>
             <div className="sectionHead addTaskContainer" onClick={() => {
-                    alert("Adding Task");
-                  }}>
+              alert("Adding Task");
+            }}>
               <ColorWandOutline
                 color={"#2f2f2f"}
                 title={"AddTask"}
@@ -50,12 +51,12 @@ function App() {
           </Grid>
         </Grid>
         <Grid container spacing={{ xs: 2, md: 4 }}>
-                  <Card/>
-                  <Card/>
-                  <Card/>
-                  <Card/>
-                  <Card/>
-          
+          <Card setShowModal={setShowModal} />
+          <Card setShowModal={setShowModal} />
+          <Card setShowModal={setShowModal} />
+          <Card setShowModal={setShowModal} />
+          <Card setShowModal={setShowModal} />
+
         </Grid>
       </Container>
       <Container className="eachContainer completedTask">
@@ -257,7 +258,6 @@ function App() {
           </Grid>
         </Grid>
       </Container>
-      { showModal && <Modal/>}
     </div>
   );
 }

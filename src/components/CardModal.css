@@ -9,7 +9,7 @@
 }
 
 .modalWindow {
-    position: absolute;
+    /* position: absolute; */
     width: 500px;
     height: 500px;
     background: #fff;
